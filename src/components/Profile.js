@@ -1,53 +1,51 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React, {useState} from 'react';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
+import useStyles from "./ProfileDesign";
+import axios from 'axios';
+import Avatar from '@material-ui/core/Avatar';
+import Upload from "./Upload";
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
-
-export default function SimpleCard() {
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import CallOutlinedIcon from '@material-ui/icons/CallOutlined';
+import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
+export default function Profile() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
-
+  const[avaiable,setAvaiable]=useState(true);
+  const[notavaiable,setNotavaiable]=useState(false);
+  
   return (
-    <Card className={classes.root}>
-      <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+    
+    <Card className={classes.back}>
+       <Upload/>
+       <h3>Firstname Lastname</h3>
+       <p style={{color:'gray'}}>-Employee</p>
+       <Button  variant={avaiable ?   "contained" : "outlined"} color="primary"
+        onClick={() => { setAvaiable(!avaiable) ; setNotavaiable(!notavaiable) }} style={{marginRight:'5%'}}>
+        Avaiable
+      </Button>
+      <Button  variant={notavaiable ?  "contained" : "outlined" } color="primary"
+        onClick={() => { setNotavaiable(!notavaiable) ; setAvaiable(!avaiable)}} style={{marginLeft:'5%'}}>
+        Not Avaiable
+      </Button>
+      <div className={classes.display}>
+      <Avatar className={classes.message}>
+        <MailOutlineIcon/>
+      </Avatar>
+      <h4 className={classes.text}>someone@email.com</h4>
+      </div>
+      <div className={classes.display}>
+      <Avatar className={classes.phone}>
+        <CallOutlinedIcon/>
+      </Avatar>
+      <h4 className={classes.text}>0000-00000000</h4>
+      </div>
+      <div className={classes.display}>
+      <Avatar className={classes.location}>
+    <LocationOnOutlinedIcon/>
+      </Avatar>
+      <h4 className={classes.text}>Home number, Street number, City and State</h4>
+      </div>
     </Card>
+    
   );
 }
