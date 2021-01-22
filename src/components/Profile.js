@@ -17,13 +17,13 @@ export default function Profile() {
     
     <Card className={classes.back}>
        <Upload/>
-       <h3>Firstname Lastname</h3>
+       <h6 style={{fontWeight: 'bold'}}>Firstname Lastname </h6>
        <p style={{color:'gray'}}>-Employee</p>
-       <Button  variant={avaiable ?   "contained" : "outlined"} color="primary"
-        onClick={() => { setAvaiable(!avaiable) ; setNotavaiable(!notavaiable) }} style={{marginRight:'5%'}}>
+       <Button  variant={avaiable ?   "contained" : "outlined"} color="primary" className={classes.button}
+        onClick={() => { setAvaiable(!avaiable) ; setNotavaiable(!notavaiable) }}>
         Avaiable
       </Button>
-      <Button  variant={notavaiable ?  "contained" : "outlined" } color="primary"
+      <Button  variant={notavaiable ?  "contained" : "outlined" } color="primary" className={classes.button}
         onClick={() => { setNotavaiable(!notavaiable) ; setAvaiable(!avaiable)}} style={{marginLeft:'5%'}}>
         Not Avaiable
       </Button>
@@ -31,19 +31,19 @@ export default function Profile() {
       <Avatar className={classes.message}>
         <MailOutlineIcon/>
       </Avatar>
-      <h4 className={classes.text}>someone@email.com</h4>
+      <p className={classes.text}>someone@email.com</p>
       </div>
       <div className={classes.display}>
       <Avatar className={classes.phone}>
         <CallOutlinedIcon/>
       </Avatar>
-      <h4 className={classes.text}>0000-00000000</h4>
+      <p className={classes.text}>0000-00000000</p>
       </div>
       <div className={classes.display}>
       <Avatar className={classes.location}>
     <LocationOnOutlinedIcon/>
       </Avatar>
-      <h4 className={classes.text}>Home number, Street number, City and State</h4>
+      <p className={classes.text}>Home number, Street number, City and State</p>
       </div>
     </Card>
     

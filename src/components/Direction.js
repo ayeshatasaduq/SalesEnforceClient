@@ -19,10 +19,10 @@ export default function Direction() {
         <Toolbar>
     
       <Link to="/" className={classes.title}>
-        <h2>Setting</h2>
+        <h5>Setting</h5>
       </Link>
       <Link to="/history" className={classes.title}>
-       <h2> History</h2>
+       <h5> History</h5>
       </Link>
 
       

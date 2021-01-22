@@ -36,7 +36,7 @@ class Upload extends React.Component {
 
     
         <label htmlFor="icon-button-file">
-        <IconButton color="primary" aria-label="upload picture" component="span" style={{marginLeft:'12%'}}>
+        <IconButton color="primary" aria-label="upload picture" component="span" style={{marginLeft:'42%'}}>
           <PhotoCamera />
         </IconButton>
       </label>

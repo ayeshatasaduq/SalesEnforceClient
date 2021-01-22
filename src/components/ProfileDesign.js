@@ -48,7 +48,12 @@ const useStyles = makeStyles((theme) => ({
   text:{
     width:'70%',
      textAlign : 'start',
-    marginTop:'2%'
+    marginTop:'2%',
+    fontWeight : 'bold',
+  },
+  button:{
+    marginTop : '3%',
+    textTransform : 'none'
   }
 }));
 

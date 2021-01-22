@@ -99,7 +99,7 @@ export default function Navbar() {
           <DrawerLeft/>
   
           
-          <div className={classes.search}>
+          <div className={classes.search} style={{marginLeft : '-15%'}}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
@@ -109,6 +109,7 @@ export default function Navbar() {
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
+              
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>

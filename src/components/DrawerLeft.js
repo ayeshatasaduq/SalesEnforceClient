@@ -59,7 +59,7 @@ function DrawerLeft() {
         <div className={classes.drawerHeader}>
           
         <Avatar className={classes.avatar}>C</Avatar>
-         <h3 className={classes.name}> Company</h3>
+         <p className={classes.name}> Company</p>
          
           <IconButton onClick={handleDrawerClose} style={{color:'white'}}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}

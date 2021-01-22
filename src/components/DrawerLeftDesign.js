@@ -54,6 +54,8 @@ const DraweruseStyles = makeStyles((theme) => ({
     color: 'white',
     left:60 ,
     position: 'absolute',
+    fontWeight: 'bold',
+    marginTop : '5%'
    },
    dashbutton:{
      width: 150,
