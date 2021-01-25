@@ -94,12 +94,12 @@ export default function Navbar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" color="default">
+      
         <Toolbar>
-          <DrawerLeft/>
+        
   
           
-          <div className={classes.search} style={{marginLeft : '-15%'}}>
+          <div className={classes.search} >
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
@@ -144,7 +144,7 @@ export default function Navbar() {
             </IconButton>
           </div>
         </Toolbar>
-      </AppBar>
+      
       {renderMobileMenu}
       {renderMenu}
     </div>

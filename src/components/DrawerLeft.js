@@ -18,7 +18,9 @@ import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import clsx from 'clsx';
 import MenuIcon from '@material-ui/icons/Menu';
-
+import PageContent from './PageContent';
+import Navbar from './Navbar';
+import AppBar from '@material-ui/core/AppBar';
 function DrawerLeft() {
   const classes = DraweruseStyles();
   const theme = useTheme();
@@ -34,7 +36,14 @@ function DrawerLeft() {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
+    <CssBaseline />
+    <AppBar
+      position="fixed" color="default"
+      className={clsx(classes.appBar, {
+        [classes.appBarShift]: open,
+      })}
+    >
+      <Toolbar>
     
     <IconButton
             color="inherit"
@@ -45,8 +54,9 @@ function DrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-
-    
+<Navbar/>
+</Toolbar>
+      </AppBar>
       <Drawer
         className={classes.drawer}
         variant="persistent"
@@ -108,7 +118,15 @@ function DrawerLeft() {
       
      
       </Drawer>
-      
+      <main
+        className={clsx(classes.content, {
+          [classes.contentShift]: open,
+        })}
+      >
+        <div className={classes.drawerHeader} />          
+<PageContent/>
+
+      </main>
     </div>
   );
 }
