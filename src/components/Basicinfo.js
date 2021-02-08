@@ -15,7 +15,7 @@ export default function Basicinfo() {
     <div>
       <div className={classes.display}>
         <h2 style={{marginLeft : '2%'}}>Profile</h2>
-        <Button className={classes.button}>Edit Profile</Button>
+        <Button className={classes.button} href="/profile">Edit Profile</Button>
         </div>
         <BrowserRouter>
         <Route exact path='/' component={Basic} />

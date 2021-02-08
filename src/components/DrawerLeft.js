@@ -86,6 +86,7 @@ function DrawerLeft() {
         className={classes.button}
         startIcon={<DashboardOutlinedIcon />}
         className={classes.dashbutton}
+        href="/"
       >
         DashBoard
       </Button>
