@@ -21,6 +21,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import PageContent from './PageContent';
 import Navbar from './Navbar';
 import AppBar from '@material-ui/core/AppBar';
+import Basicinfo from "./Basicinfo";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+
 function DrawerLeft() {
   const classes = DraweruseStyles();
   const theme = useTheme();
@@ -54,6 +57,7 @@ function DrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
+          
 <Navbar/>
 </Toolbar>
       </AppBar>
@@ -123,10 +127,13 @@ function DrawerLeft() {
           [classes.contentShift]: open,
         })}
       >
-        <div className={classes.drawerHeader} />          
-<PageContent/>
-
+        <div className={classes.drawerHeader} />  
+        <BrowserRouter>       
+        <Route exact path='/profile' component={PageContent} />
+      <Route exact path='/' component={Basicinfo} />
+      </BrowserRouter> 
       </main>
+      
     </div>
   );
 }

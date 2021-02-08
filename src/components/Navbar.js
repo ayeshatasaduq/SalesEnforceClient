@@ -14,7 +14,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import useStyles from './NavbarDesign';
-import DrawerLeft from "./DrawerLeft";
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import Avatar from '@material-ui/core/Avatar';
+
 export default function Navbar() {
 
 
@@ -116,11 +118,14 @@ export default function Navbar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             
-            <IconButton aria-label="show 17 new notifications" color="inherit">
+            <IconButton aria-label="show 17 new notifications" color="inherit" >
               <Badge badgeContent={17} color="secondary">
               <NotificationsNoneIcon style={{color:'black'}}/>
               </Badge>
             </IconButton>
+            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" className={classes.small} />
+
+            <h10 className={classes.username}>User Name</h10>
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -129,7 +134,8 @@ export default function Navbar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle  style={{color:'black'}}/>
+
+            <KeyboardArrowDownIcon/>
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>

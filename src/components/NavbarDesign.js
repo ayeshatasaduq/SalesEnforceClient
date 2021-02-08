@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: fade(theme.palette.common.white, 0.15),
       '&:hover': {
         backgroundColor: fade(theme.palette.common.white, 0.25),
-      
+          
       },
       marginRight: theme.spacing(2),
       marginLeft: 0,
@@ -64,6 +64,16 @@ const useStyles = makeStyles((theme) => ({
         display: 'none',
       },
     },
+    username:{
+      fontWeight:'bold' ,
+       marginTop:'8%'
+    },
+    small: {
+      width: theme.spacing(3),
+      height: theme.spacing(3),
+      marginTop:'7%'
+    },
+    
   }));
   
 

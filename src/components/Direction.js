@@ -13,12 +13,12 @@ export default function Direction() {
   const classes = useStyles();
   return (
     <BrowserRouter>
-    <Card className={classes.continue}>
+        <Card className={classes.continue}>
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Toolbar>
     
-      <Link to="/" className={classes.title}>
+      <Link to="/profile" className={classes.title}>
         <h5>Setting</h5>
       </Link>
       <Link to="/history" className={classes.title}>
@@ -28,7 +28,7 @@ export default function Direction() {
       
       
     </Toolbar></AppBar></div>
-    <Route exact path='/' component={Settings} />
+    <Route exact path='/profile' component={Settings} />
       <Route exact path='/history' component={History} />
     </Card>
     </BrowserRouter>

@@ -6,7 +6,7 @@ import { fade,makeStyles, useTheme } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     footer: {
       display: 'flex',
-      justifyContent: "space-between"
+      justifyContent: "space-between",
     
   },
 
@@ -19,7 +19,7 @@ function PageContent() {
       <div>
        
           
-       <h4 style={{marginLeft:'-88%' , padding:'1%'}}>Profile</h4>
+       <h2 style={{marginLeft:'-88%' , marginTop : '-1%'}}>Profile</h2>
     
        <div className={classes.footer}>
          <Profile/>
