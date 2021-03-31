@@ -22,6 +22,9 @@ import PageContent from './PageContent';
 import Navbar from './Navbar';
 import AppBar from '@material-ui/core/AppBar';
 import Basicinfo from "./Basicinfo";
+import ApplyforLeave from "./ApplyforLeave";
+import AttendenceDisplay from './AttendenceDisplay';
+import Employees from './Employees';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 function DrawerLeft() {
@@ -132,6 +135,9 @@ function DrawerLeft() {
         <BrowserRouter>       
         <Route exact path='/profile' component={PageContent} />
       <Route exact path='/' component={Basicinfo} />
+      <Route exact path='/leave' component={ApplyforLeave} />
+      <Route exact path='/attendencedisplay' component={AttendenceDisplay}/>
+      <Route exact path='/employe' component={Employees}/>
       </BrowserRouter> 
       </main>
       
