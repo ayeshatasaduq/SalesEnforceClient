@@ -26,6 +26,7 @@ import ApplyforLeave from "./ApplyforLeave";
 import AttendenceDisplay from './AttendenceDisplay';
 import Employees from './Employees';
 import Create from './Create';
+import CreateUser from './CreatUser';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 function DrawerLeft() {
@@ -140,6 +141,7 @@ function DrawerLeft() {
       <Route exact path='/attendencedisplay' component={AttendenceDisplay}/>
       <Route exact path='/employe' component={Employees}/>
       <Route exact path='/create' component={Create}/>
+      <Route exact path='/createuser' component={CreateUser}/>
       </BrowserRouter> 
       </main>
       
