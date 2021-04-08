@@ -27,12 +27,12 @@ for (let number = 1; number <= 5; number++) {
 }
   return (
     <div>
-      
-        <div className={classes.displayclass}>
+          <div className={classes.displayclass}>
+        
         <h3 className={classes.title}>Attendence</h3>
         <div className={classes.displayclass} style={{width:"25%"}}>
         <Card style={{display:"flex", justifyContent:"space-between" ,color:"gray" , width:"70%", padding:"1%"}}>
-            <p style={{maxWidth:"75%", margin:"1%", marginTop:"2%", marginLeft:"5%"}}>01Jan 2020 - 27 Feb 2021</p>
+            <p style={{maxWidth:"75%", margin:"1%", marginTop:"2%", marginLeft:"5%"}}>01 Jan 2020 - 27 Feb 2021</p>
             <IconButton style={{color:"gray"}} size="small">
             <ChevronLeftIcon/>
             </IconButton>
