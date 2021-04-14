@@ -29,6 +29,7 @@ import Create from './Create';
 import CreateUser from './CreatUser';
 import AttendenceCalender from "./AttendenceCalender";
 import Dashboard from './Dashboard';
+import Payroll from './Payroll';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 function DrawerLeft() {
@@ -146,6 +147,7 @@ function DrawerLeft() {
       <Route exact path='/createuser' component={CreateUser}/>
       <Route exact path='/attendencecalender' component={AttendenceCalender}/>
       <Route exact path='/dashboard' component={Dashboard}/>
+      <Route exact path='/payroll' component={Payroll}/>
       </BrowserRouter> 
       </main>
       
